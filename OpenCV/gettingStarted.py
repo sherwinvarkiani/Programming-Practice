@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 
 # load image
-img = cv2.imread("C:/Users/svark/Desktop/Projects/OpenCV/opencv-logo.png", 0)
+img = cv2.imread("./OpenCV/opencv-logo.png", 0)
 
 # display image
 cv2.namedWindow("Image", cv2.WINDOW_NORMAL)
