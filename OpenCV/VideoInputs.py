@@ -24,8 +24,11 @@ while(True):
     ret, frame = cap.read()
 
     frame = cv2.resize(frame, (0,0), fx=0.5, fy=0.5)
+    origFrame = frame.copy()
     cv2.circle(frame, point, radius, color, line_width)
     cv2.imshow("Frame", frame)
+    cannyFrame = cv2.Canny(origFrame, 100, 70)
+    cv2.imshow("Canny Frame", cannyFrame)
 
     # Exit key
     ch = cv2.waitKey(1)
